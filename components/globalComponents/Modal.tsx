@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Input from "./Input";
 
 
 const Modal = () => {
@@ -9,7 +10,7 @@ const Modal = () => {
                     افزودن قرارداد
                 </div>
                 <div className="bg-white p-2 border-b border-b-gray-200 ">
-                    
+                    <Input id="client" type="text" hasSearch placeholder="وارد کنید" label="مشتری" required />
                 </div>
                 <div className="bg-gray-100 p-3 px-5 flex items-end justify-end gap-2">
                     <Button className="bg-blue-700 text-white">
