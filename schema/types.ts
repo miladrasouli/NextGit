@@ -15,3 +15,15 @@ export interface InputCompType {
     placeholder: string;
     className?: string;
 }
+
+export interface SelectCompType {
+    list: {
+        key: string;
+        value: string;
+    }[];
+    id: string;
+    label: string;
+    required: boolean;
+
+    className?: string;
+}
