@@ -5,7 +5,7 @@ import { ButtonCompType } from "@/schema/types"
 const Button = ({ children, className }: ButtonCompType) => {
     return (
         <>
-            <button className={`rounded py-2 px-3 ${className}`}>
+            <button className={`cursor-pointer rounded py-2 px-3 ${className}`}>
                 {children}
             </button>
         </>

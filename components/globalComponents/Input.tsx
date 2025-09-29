@@ -4,7 +4,7 @@ import { BiSearch } from "react-icons/bi";
 
 const Input = (props: InputCompType) => {
     return (
-        <div className="flex flex-col gap-2">
+        <div className="w-full flex flex-col gap-2">
             {props.label && <>
                 <label htmlFor={props.id}>{props.label}
                     {props.required && <span className="text-red-500 mx-1">
@@ -12,9 +12,9 @@ const Input = (props: InputCompType) => {
                     </span>}
                 </label>
             </>}
-            <div className="w-full flex ">
-                <input type={props.type} placeholder={props.placeholder} className={`outline-0 border border-gray-300 rounded-r px-3 ${props.className}`} />
-                {props.hasSearch && <button className="bg-gray-700 rounded-l-sm p-2 text-white">
+            <div className="w-full flex">
+                <input type={props.type} placeholder={props.placeholder} className={`outline-0 border border-gray-300 w-full rounded-r py-2 px-3 ${props.className}`} />
+                {props.hasSearch && <button className="bg-gray-500 cursor-pointer rounded-l-sm p-2 text-white">
                     <BiSearch size={20} />
                 </button>}
             </div>

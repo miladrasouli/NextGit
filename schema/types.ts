@@ -11,7 +11,7 @@ export interface InputCompType {
     label: string;
     id: string;
     required: boolean;
-    hasSearch: boolean;
+    hasSearch?: boolean;
     placeholder: string;
     className?: string;
 }
