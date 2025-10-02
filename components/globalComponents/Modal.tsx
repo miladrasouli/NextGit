@@ -27,15 +27,15 @@ const Modal = () => {
                             <DatePicker
                                 value={selectedDate}
                                 onChange={(date) => setSelectedDate(date)}
-                                className="!w-full text-nowrap"
+                                className="!w-full text-nowrap z-50"
                                 inputClassName="border-gray-300 focus:border-blue-500 focus:ring-blue-500 rounded"
-                                popupClassName="w-72 bg-white h-52 overflow-auto absolute flex flex-col shadow-lg border "
+                                popupClassName="w-full bg-white h-52 overflow-auto absolute flex flex-col shadow-lg border "
                                 selectedDayClassName="bg-blue-500 text-white hover:bg-blue-600"
                                 holidayClassName="text-red-500 dark:text-red-400"
                                 todayClassName="ring-2 ring-blue-500"
                                 size="md"
                                 weeksClassName="grid grid-cols-7"
-                                daysClassName="grid grid-cols-7"
+                                daysClassName="grid grid-cols-7 text-center"
                                 dir="rtl"
                             />
                         </div>
