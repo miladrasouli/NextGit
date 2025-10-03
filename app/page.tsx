@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <>
       <div>
-        {/* <Modal /> */}
-        <Login />
+        <Modal />
+        {/* <Login /> */}
       </div>
     </>
   );

@@ -17,13 +17,18 @@ const Input = (props: InputCompType) => {
                 </label>
             </>}
             <div className="w-full flex relative">
-                <input dir={props.dir} type={inputType} placeholder={props.placeholder} className={`outline-0 border border-gray-300 w-full rounded-r py-2 px-3 ${props.className}`} />
+                <input
+                    dir={props.dir}
+                    type={inputType}
+                    placeholder={props.placeholder}
+                    {...props.register(props.id)}
+                    className={`outline-0 border border-gray-300 w-full rounded-r py-2 px-3 ${props.className}`} />
                 {props.type === "password" &&
                     <button onClick={() => setInputType(prev => prev === "password" ? "text" : "password")} className="absolute top-3 right-3 cursor-pointer">
                         <BsEye />
                     </button>
                 }
-                {props.hasSearch && <button className="bg-gray-500 cursor-pointer rounded-l-sm p-2 text-white">
+                {props.hasSearch && <button onClick={props.handleSearch} className="bg-gray-500 cursor-pointer rounded-l-sm p-2 text-white">
                     <BiSearch size={20} />
                 </button>}
             </div>

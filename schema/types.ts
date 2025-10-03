@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { UseFormRegister } from "react-hook-form";
 
 
 export interface ButtonCompType {
@@ -10,11 +11,14 @@ export interface InputCompType {
     type: "text" | "number" | "password";
     label: string;
     id: string;
+    name: string;
     required: boolean;
     hasSearch?: boolean;
     placeholder: string;
     className?: string;
     dir?: "rtl" | "ltr";
+    register: UseFormRegister<{ [key: string]: string }>;
+    handleSearch?: () => void;
 }
 
 export interface SelectCompType {
