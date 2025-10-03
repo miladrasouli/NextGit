@@ -28,7 +28,9 @@ const Input = (props: InputCompType) => {
                         <BsEye />
                     </button>
                 }
-                {props.hasSearch && <button onClick={props.handleSearch} className="bg-gray-500 cursor-pointer rounded-l-sm p-2 text-white">
+                {props.hasSearch && <button 
+                // onClick={props.handleSearch}
+                 className="bg-gray-500 cursor-pointer rounded-l-sm p-2 text-white">
                     <BiSearch size={20} />
                 </button>}
             </div>

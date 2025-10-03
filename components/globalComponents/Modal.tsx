@@ -12,14 +12,14 @@ const Modal = () => {
     const [selectedDate, setSelectedDate] = useState<string | null>(null);
 
     const { register, handleSubmit, getValues } = useForm()
-    const onSubmit = (value: {}) => {
+    const onSubmitContract = (value: {}) => {
         console.log(value)
         // date: gDate
 
     }
     return (
         <div className="flex items-center justify-center bg-black/30 px-10 sm:px-0 fixed top-0 left-0 w-screen h-screen">
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmitContract)}>
                 <div className="bg-gray-700 w-full p-3 text-white">
                     افزودن قرارداد
                 </div>
@@ -68,7 +68,7 @@ const Modal = () => {
                     <div className="flex flex-wrap sm:flex-nowrap items-center w-full gap-2">
                         <Input
                             register={register}
-                            id=""
+                            id="count"
                             name=""
                             type="text"
                             placeholder="وارد کنید"
@@ -107,11 +107,11 @@ const Modal = () => {
                     </div>
                 </div>
                 <div className="bg-gray-100 p-3 px-5 flex items-end justify-end gap-2">
-                    <Button className="bg-blue-700 text-white flex gap-1 items-center">
+                    <Button type="submit" className="bg-blue-700 text-white flex gap-1 items-center">
                         <BiSave />
                         ذخیره
                     </Button>
-                    <Button className="bg-gray-500 text-white flex gap-1 items-center">
+                    <Button type="button" className="bg-gray-500 text-white flex gap-1 items-center">
                         <CgClose />
                         انصراف
                     </Button>

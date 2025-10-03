@@ -4,6 +4,7 @@ import { UseFormRegister } from "react-hook-form";
 
 export interface ButtonCompType {
     children: ReactNode;
+    type: "submit" | "reset" | "button";
     className?: string;
 }
 
